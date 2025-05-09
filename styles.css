@@ -1,0 +1,155 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin: 5%;
+  color: #FEF2BF;
+}
+
+.score-container {
+  margin: 20px 0;
+}
+
+.score-container h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  color: #FEF2BF;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  margin: 15px;
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  border: 10px solid black;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.start-btn {
+  background-color: #FEF2BF;
+  color: #011F3F;
+  font-family: 'Press Start 2P', cursive;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  margin: 20px 0;
+  cursor: pointer;
+  display: none;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.signature {
+  margin-top: 30px;
+  color: #FEF2BF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+}
+
+.signature p {
+  margin: 0;
+  padding: 10px;
+}
+
+@keyframes levelComplete {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.level-complete {
+  animation: levelComplete 0.5s ease-in-out;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  #level-title {
+    font-size: 2rem;
+    margin: 3%;
+  }
+
+  .score-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    border: 8px solid black;
+  }
+
+  .start-btn {
+    display: inline-block;
+  }
+
+  .signature {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #level-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    height: 100px;
+    width: 100px;
+    margin: 8px;
+    border: 6px solid black;
+  }
+
+  .score-container h2 {
+    font-size: 1rem;
+  }
+}
