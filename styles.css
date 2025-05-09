@@ -7,6 +7,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #level-title {
@@ -47,6 +49,10 @@ body {
   border: 10px solid black;
   border-radius: 20%;
   cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .start-btn {
@@ -60,6 +66,10 @@ body {
   margin: 20px 0;
   cursor: pointer;
   display: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .game-over {
@@ -115,10 +125,12 @@ body {
   #level-title {
     font-size: 2rem;
     margin: 3%;
+    padding: 0 10px;
   }
 
   .score-container h2 {
     font-size: 1.2rem;
+    padding: 0 10px;
   }
 
   .btn {
@@ -130,16 +142,20 @@ body {
 
   .start-btn {
     display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
   }
 
   .signature {
     font-size: 0.8rem;
+    padding: 0 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
   #level-title {
     font-size: 1.5rem;
+    margin: 2%;
   }
 
   .btn {
@@ -151,5 +167,10 @@ body {
 
   .score-container h2 {
     font-size: 1rem;
+  }
+
+  .start-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
