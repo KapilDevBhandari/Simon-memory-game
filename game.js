@@ -8,7 +8,7 @@ var level = 0;
 var score = 0;
 
 // Check if device is mobile
-var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
 
 // Initialize game based on device type
 if (isMobile) {
@@ -27,7 +27,8 @@ $(document).keypress(function() {
 });
 
 // Start game with button (mobile only)
-$(".start-btn").click(function() {
+$(".start-btn").on("click touchstart", function(e) {
+  e.preventDefault();
   if (!started) {
     startGame();
   }
@@ -116,6 +117,23 @@ function startOver() {
   score = 0;
   $("#score").text(score);
   if (isMobile) {
+    $("#level-title").text("Tap Start to Play");
     $(".start-btn").show().text("Start Game");
+  } else {
+    $("#level-title").text("Press A Key to Start");
   }
 }
+
+// Handle window resize
+$(window).resize(function() {
+  isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+  if (!started) {
+    if (isMobile) {
+      $("#level-title").text("Tap Start to Play");
+      $(".start-btn").show();
+    } else {
+      $("#level-title").text("Press A Key to Start");
+      $(".start-btn").hide();
+    }
+  }
+});
