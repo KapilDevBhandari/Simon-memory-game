@@ -27,10 +27,9 @@ A web-based memory game inspired by the classic **Simon Game**, where users must
 
 ## 🎨 Screenshots
 
-![Game Screenshot - Desktop](./screenshots/desktop-simon.png)  
-![Game Screenshot - Mobile](./screenshots/mobile-simon.png)
+![image](https://github.com/user-attachments/assets/a499dc94-ee0b-4c05-8903-b5df8053c1f9)
 
-> *(Add your own screenshots in a `screenshots/` folder if desired)*
+
 
 ## 📂 Project Structure
 
