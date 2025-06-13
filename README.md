@@ -22,7 +22,6 @@ A web-based memory game inspired by the classic **Simon Game**, where users must
 - **HTML5**
 - **CSS3**
 - **JavaScript (ES6)**
-- **jQuery**
 - **Google Fonts (Press Start 2P)**
 
 ## 🎨 Screenshots
@@ -31,5 +30,17 @@ A web-based memory game inspired by the classic **Simon Game**, where users must
 
 
 
-## 📂 Project Structure
+## 🔧 How to Run
+
+1. Clone or download this repository
+2. Make sure all files (HTML, CSS, JS, sound) are in the same folder
+3. Open `index.html` in your browser
+4. Play and enjoy!
+
+## 👤 Author
+
+**Kapil Dev Bhandari**  
+📧 kapildevbhandari10@gmail.com  
+
+
 
